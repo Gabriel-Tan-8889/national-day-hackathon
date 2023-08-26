@@ -21,13 +21,13 @@ struct ContentView: View {
         Candidate(name: "Junior", attackPower: 0, defense: 0)
     ]
     @State private var selectedCandidate: Candidate?
-
+    
     var body: some View {
         VStack {
             Text("Presidential Election App")
                 .font(.title)
                 .padding()
-
+            
             ForEach(candidates) { candidate in
                 VStack {
                     Text(candidate.name)
@@ -37,7 +37,17 @@ struct ContentView: View {
                 }
                 .padding()
             }
-
+            Button(action: {
+               
+                }
+            ) {
+                Text("Add")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
             Button(action: {
                 // Perform voting logic here
                 if let selectedCandidate = selectedCandidate {
