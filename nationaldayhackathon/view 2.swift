@@ -7,3 +7,15 @@
 
 import SwiftUI
 
+struct NewSwiftUIView: View {
+    var body: some View {
+        VStack {
+            Text(" Here are some facts about the elections")
+            
+            
+         
+        }
+    }
+}
+
+
