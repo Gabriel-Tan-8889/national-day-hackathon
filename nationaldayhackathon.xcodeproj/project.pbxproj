@@ -13,7 +13,6 @@
 		DF13E65B2A99922400F6E527 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF13E65A2A99922400F6E527 /* Preview Assets.xcassets */; };
 		DF13E6622A9994BC00F6E527 /* view 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13E6612A9994BC00F6E527 /* view 2.swift */; };
 		DF13E6642A99960500F6E527 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13E6632A99960500F6E527 /* File.swift */; };
-		DF13E6662A9997CF00F6E527 /* addview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13E6652A9997CF00F6E527 /* addview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		DF13E65A2A99922400F6E527 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF13E6612A9994BC00F6E527 /* view 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view 2.swift"; sourceTree = "<group>"; };
 		DF13E6632A99960500F6E527 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		DF13E6652A9997CF00F6E527 /* addview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 			children = (
 				DF13E6532A99922200F6E527 /* nationaldayhackathonApp.swift */,
 				DF13E6552A99922200F6E527 /* ContentView.swift */,
-				DF13E6652A9997CF00F6E527 /* addview.swift */,
 				DF13E6612A9994BC00F6E527 /* view 2.swift */,
 				DF13E6632A99960500F6E527 /* File.swift */,
 				DF13E6572A99922400F6E527 /* Assets.xcassets */,
@@ -150,7 +147,6 @@
 				DF13E6642A99960500F6E527 /* File.swift in Sources */,
 				DF13E6562A99922200F6E527 /* ContentView.swift in Sources */,
 				DF13E6542A99922200F6E527 /* nationaldayhackathonApp.swift in Sources */,
-				DF13E6662A9997CF00F6E527 /* addview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,12 +4,11 @@
 //
 //  Created by Jonaven Tan on 26/8/23.
 //
-
 import SwiftUI
 
 struct Candidate: Identifiable {
     let id = UUID()
-    var name: String
+    var names: String
     var description: String
     var element: String
     var isVoted: Bool = false
@@ -17,20 +16,20 @@ struct Candidate: Identifiable {
 
 struct ContentView: View {
     @State private var candidates: [Candidate] = [
-        Candidate(name: "Jamal", description: "", element: ""),
-        Candidate(name: "Jackson", description: "", element: ""),
-        Candidate(name: "Junior", description: "", element: "")
+        Candidate(names: "Jamal", description: "", element: ""),
+        Candidate(names: "Jackson", description: "", element: ""),
+        Candidate(names: "Junior", description: "", element: "")
     ]
     
     var body: some View {
         VStack {
-            List(candidates) { candidate in
+            List($candidates) { $candidate in
                 VStack(alignment: .leading) {
-                    Text(candidate.name)
+                    Text(candidate.names)
                         .font(.title)
-                    TextField("Description", text: self.getDescriptionBinding(for: candidate))
-                    TextField("Element", text: self.getElementBinding(for: candidate))
-                    Toggle("Vote", isOn: self.getVoteBinding(for: candidate))
+                    TextField("Description", text: $candidate.description)
+                    TextField("Element", text: $candidate.element)
+                    Toggle("Vote", isOn: $candidate.isVoted)
                 }
             }
             
@@ -49,38 +48,8 @@ struct ContentView: View {
         .padding()
     }
     
-    private func getDescriptionBinding(for candidate: Candidate) -> Binding<String> {
-        return Binding<String>(
-            get: {
-                candidate.description
-            },
-            set: {
-                candidate.description = $0
-            }
-        )
-    }
-    
-    private func getElementBinding(for candidate: Candidate) -> Binding<String> {
-        return Binding<String>(
-            get: {
-                candidate.element
-            },
-            set: {
-                candidate.element = $0
-            }
-        )
-    }
-    
-    private func getVoteBinding(for candidate: Candidate) -> Binding<Bool> {
-        return Binding<Bool>(
-            get: {
-                candidate.isVoted
-            },
-            set: {
-                candidate.isVoted = $0
-            }
-        )
-    }
+  
+  
     
     private func submitVotes() {
         let votedCandidates = candidates.filter { $0.isVoted }
@@ -90,7 +59,7 @@ struct ContentView: View {
         } else {
             print("Voted candidates:")
             for candidate in votedCandidates {
-                print("- \(candidate.name)")
+                print("\(candidate.names)")
             }
         }
     }

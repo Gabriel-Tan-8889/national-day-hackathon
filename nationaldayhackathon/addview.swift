@@ -21,8 +21,8 @@ struct person: View {
             
             Section("Actions") {
                 Button("Save") {
-                    let newPerson = Todo(Name: todoPersonName, )
-                    sourceArray.append(newTodo)
+                    let newPerson = person(Name: todoPersonName, )
+                    sourceArray.append(newPerson)
                     dismiss()
                 }
                 Button("Cancel", role: .destructive) {
@@ -32,4 +32,3 @@ struct person: View {
         }
     }
 }
-
